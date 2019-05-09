@@ -13,7 +13,9 @@
         console.log(String(isHead));
         console.log(String(isDisabled));
         console.log(String(isForeigner));
-
+        if(weight > 1000) {
+            alert("wdnmd zhen de jiu tuo yun yi dun a?");
+        }
         if (weight < 30) {
             document.getElementById("price").value = 0;
             return 0;
