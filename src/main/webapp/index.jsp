@@ -3,11 +3,12 @@
 <h1>welcome to use price calculator!</h1>
 <script language="JavaScript">
 
+
     function calculate() {
-        var weight = document.getElementById("weight").value,
-            isHead = document.getElementById("isHead").value.checked,
-            isDisabled = document.getElementById("isDisabled").value.checked,
-            isForeigner = document.getElementById("isForeigner").value.checked;
+        var isHead = document.getElementById("isHead").checked,
+            isDisabled = document.getElementById("isDisabled").checked,
+            isForeigner = document.getElementById("isForeigner").checked;
+        var weight = document.getElementById("weight").value;
         console.log(weight);
         console.log(String(isHead));
         console.log(String(isDisabled));
@@ -18,9 +19,9 @@
             return 0;
         }
         var price = weight - 30;
-        if (isHead) {
+        if (isHead)
             price *= 4;
-        } else price *= 6;
+        else price *= 6;
         if (isForeigner)
             price *= 2;
         if (isDisabled)
@@ -44,13 +45,13 @@
                 Is the first class?
             </td>
             <td>
-                <input id="isHead" checked name="isHead" type="checkbox">
+                <input id="isHead" name="isHead" type="checkbox">
             </td>
         </tr>
         <tr>
             <td>Is foreigner?</td>
             <td>
-                <input id="isForeigner" checked name="isForeigner" type="checkbox">
+                <input id="isForeigner" name="isForeigner" type="checkbox">
             </td>
         </tr>
         <tr>
@@ -58,7 +59,7 @@
                 Is disabled?
             </td>
             <td>
-                <input id="isDisabled" checked name="isDisabled" type="checkbox">
+                <input id="isDisabled" name="isDisabled" type="checkbox">
             </td>
         </tr>
         <tr>
